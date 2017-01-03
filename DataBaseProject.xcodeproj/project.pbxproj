@@ -7,15 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A488774E1E166BFB00F807B8 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A488774D1E166BFB00F807B8 /* NSString+Helper.m */; };
+		A48877511E166C3600F807B8 /* NSObject+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = A48877501E166C3600F807B8 /* NSObject+Empty.m */; };
 		A495C74D1E164E9000A4E2CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A495C74C1E164E9000A4E2CD /* main.m */; };
 		A495C7501E164E9000A4E2CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A495C74F1E164E9000A4E2CD /* AppDelegate.m */; };
 		A495C7531E164E9000A4E2CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A495C7521E164E9000A4E2CD /* ViewController.m */; };
 		A495C7561E164E9000A4E2CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A495C7541E164E9000A4E2CD /* Main.storyboard */; };
 		A495C7581E164E9000A4E2CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A495C7571E164E9000A4E2CD /* Assets.xcassets */; };
 		A495C75B1E164E9000A4E2CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A495C7591E164E9000A4E2CD /* LaunchScreen.storyboard */; };
+		A4FF4ABE1E1650A8006A3B96 /* IPSDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF4AB71E1650A8006A3B96 /* IPSDatabaseManager.m */; };
+		A4FF4ABF1E1650A8006A3B96 /* DBManagerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF4AB91E1650A8006A3B96 /* DBManagerBase.m */; };
+		A4FF4AC01E1650A8006A3B96 /* DBQuestionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF4ABB1E1650A8006A3B96 /* DBQuestionInfo.m */; };
+		A4FF4AC11E1650A8006A3B96 /* DBQuestionAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF4ABD1E1650A8006A3B96 /* DBQuestionAnswer.m */; };
+		A4FF4ACF1E16511D006A3B96 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF4AC51E16511D006A3B96 /* FMDatabase.m */; };
+		A4FF4AD01E16511D006A3B96 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF4AC71E16511D006A3B96 /* FMDatabaseAdditions.m */; };
+		A4FF4AD11E16511D006A3B96 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF4AC91E16511D006A3B96 /* FMDatabasePool.m */; };
+		A4FF4AD21E16511D006A3B96 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF4ACB1E16511D006A3B96 /* FMDatabaseQueue.m */; };
+		A4FF4AD31E16511D006A3B96 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF4ACE1E16511D006A3B96 /* FMResultSet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A488774C1E166BFB00F807B8 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
+		A488774D1E166BFB00F807B8 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
+		A488774F1E166C3600F807B8 /* NSObject+Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Empty.h"; sourceTree = "<group>"; };
+		A48877501E166C3600F807B8 /* NSObject+Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Empty.m"; sourceTree = "<group>"; };
+		A48877521E166D2A00F807B8 /* Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Prefix.pch"; sourceTree = "<group>"; };
 		A495C7481E164E9000A4E2CD /* DataBaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataBaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A495C74C1E164E9000A4E2CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A495C74E1E164E9000A4E2CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +42,25 @@
 		A495C7571E164E9000A4E2CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A495C75A1E164E9000A4E2CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A495C75C1E164E9000A4E2CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4FF4AB61E1650A8006A3B96 /* IPSDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPSDatabaseManager.h; sourceTree = "<group>"; };
+		A4FF4AB71E1650A8006A3B96 /* IPSDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPSDatabaseManager.m; sourceTree = "<group>"; };
+		A4FF4AB81E1650A8006A3B96 /* DBManagerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManagerBase.h; sourceTree = "<group>"; };
+		A4FF4AB91E1650A8006A3B96 /* DBManagerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManagerBase.m; sourceTree = "<group>"; };
+		A4FF4ABA1E1650A8006A3B96 /* DBQuestionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBQuestionInfo.h; sourceTree = "<group>"; };
+		A4FF4ABB1E1650A8006A3B96 /* DBQuestionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBQuestionInfo.m; sourceTree = "<group>"; };
+		A4FF4ABC1E1650A8006A3B96 /* DBQuestionAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBQuestionAnswer.h; sourceTree = "<group>"; };
+		A4FF4ABD1E1650A8006A3B96 /* DBQuestionAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBQuestionAnswer.m; sourceTree = "<group>"; };
+		A4FF4AC41E16511D006A3B96 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		A4FF4AC51E16511D006A3B96 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		A4FF4AC61E16511D006A3B96 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		A4FF4AC71E16511D006A3B96 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		A4FF4AC81E16511D006A3B96 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		A4FF4AC91E16511D006A3B96 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		A4FF4ACA1E16511D006A3B96 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		A4FF4ACB1E16511D006A3B96 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		A4FF4ACC1E16511D006A3B96 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		A4FF4ACD1E16511D006A3B96 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		A4FF4ACE1E16511D006A3B96 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +97,7 @@
 				A495C74F1E164E9000A4E2CD /* AppDelegate.m */,
 				A495C7511E164E9000A4E2CD /* ViewController.h */,
 				A495C7521E164E9000A4E2CD /* ViewController.m */,
+				A4FF4AC21E1650B0006A3B96 /* DataBase */,
 				A495C7541E164E9000A4E2CD /* Main.storyboard */,
 				A495C7571E164E9000A4E2CD /* Assets.xcassets */,
 				A495C7591E164E9000A4E2CD /* LaunchScreen.storyboard */,
@@ -74,9 +110,48 @@
 		A495C74B1E164E9000A4E2CD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A488774F1E166C3600F807B8 /* NSObject+Empty.h */,
+				A48877501E166C3600F807B8 /* NSObject+Empty.m */,
+				A488774C1E166BFB00F807B8 /* NSString+Helper.h */,
+				A488774D1E166BFB00F807B8 /* NSString+Helper.m */,
+				A48877521E166D2A00F807B8 /* Demo-Prefix.pch */,
+				A4FF4AC31E16511D006A3B96 /* FMDB */,
 				A495C74C1E164E9000A4E2CD /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A4FF4AC21E1650B0006A3B96 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				A4FF4AB61E1650A8006A3B96 /* IPSDatabaseManager.h */,
+				A4FF4AB71E1650A8006A3B96 /* IPSDatabaseManager.m */,
+				A4FF4AB81E1650A8006A3B96 /* DBManagerBase.h */,
+				A4FF4AB91E1650A8006A3B96 /* DBManagerBase.m */,
+				A4FF4ABA1E1650A8006A3B96 /* DBQuestionInfo.h */,
+				A4FF4ABB1E1650A8006A3B96 /* DBQuestionInfo.m */,
+				A4FF4ABC1E1650A8006A3B96 /* DBQuestionAnswer.h */,
+				A4FF4ABD1E1650A8006A3B96 /* DBQuestionAnswer.m */,
+			);
+			name = DataBase;
+			sourceTree = "<group>";
+		};
+		A4FF4AC31E16511D006A3B96 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				A4FF4AC41E16511D006A3B96 /* FMDatabase.h */,
+				A4FF4AC51E16511D006A3B96 /* FMDatabase.m */,
+				A4FF4AC61E16511D006A3B96 /* FMDatabaseAdditions.h */,
+				A4FF4AC71E16511D006A3B96 /* FMDatabaseAdditions.m */,
+				A4FF4AC81E16511D006A3B96 /* FMDatabasePool.h */,
+				A4FF4AC91E16511D006A3B96 /* FMDatabasePool.m */,
+				A4FF4ACA1E16511D006A3B96 /* FMDatabaseQueue.h */,
+				A4FF4ACB1E16511D006A3B96 /* FMDatabaseQueue.m */,
+				A4FF4ACC1E16511D006A3B96 /* FMDB.h */,
+				A4FF4ACD1E16511D006A3B96 /* FMResultSet.h */,
+				A4FF4ACE1E16511D006A3B96 /* FMResultSet.m */,
+			);
+			path = FMDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +227,17 @@
 				A495C7531E164E9000A4E2CD /* ViewController.m in Sources */,
 				A495C7501E164E9000A4E2CD /* AppDelegate.m in Sources */,
 				A495C74D1E164E9000A4E2CD /* main.m in Sources */,
+				A4FF4AC01E1650A8006A3B96 /* DBQuestionInfo.m in Sources */,
+				A4FF4ABE1E1650A8006A3B96 /* IPSDatabaseManager.m in Sources */,
+				A4FF4AD01E16511D006A3B96 /* FMDatabaseAdditions.m in Sources */,
+				A4FF4AD31E16511D006A3B96 /* FMResultSet.m in Sources */,
+				A4FF4AC11E1650A8006A3B96 /* DBQuestionAnswer.m in Sources */,
+				A4FF4AD11E16511D006A3B96 /* FMDatabasePool.m in Sources */,
+				A4FF4AD21E16511D006A3B96 /* FMDatabaseQueue.m in Sources */,
+				A4FF4ABF1E1650A8006A3B96 /* DBManagerBase.m in Sources */,
+				A488774E1E166BFB00F807B8 /* NSString+Helper.m in Sources */,
+				A4FF4ACF1E16511D006A3B96 /* FMDatabase.m in Sources */,
+				A48877511E166C3600F807B8 /* NSObject+Empty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +349,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DataBaseProject/Demo-Prefix.pch";
 				INFOPLIST_FILE = DataBaseProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.emuchDT.DataBaseProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,7 +363,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DataBaseProject/Demo-Prefix.pch";
 				INFOPLIST_FILE = DataBaseProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.emuchDT.DataBaseProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +392,7 @@
 				A495C7611E164E9000A4E2CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
