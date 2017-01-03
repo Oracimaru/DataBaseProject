@@ -9,7 +9,6 @@
 #import "DBManagerBase.h"
 
 @interface DBQuestionInfo : DBManagerBase
-
 /**
  *  插入一条题目缓存
  *
@@ -46,24 +45,6 @@
  *  @return file字典
  */
 + (NSDictionary *)getDownloadQuestionsJsonFileInDBWithFileUrl:(NSString *)fileUrl;
-
-
-///**
-// *  更新缓存的答案字典
-// *
-// *  @param fileUrl    原来存储的json文件的url
-// *  @param answerDict 提交答案的字典
-// */
-//+ (void)updateAnswerCommitDictWithFileUrl:(NSString *)fileUrl andAnswerCommitDict:(NSDictionary *)answerDict;
-///**
-// *  获取对应题目的答案字典
-// *
-// *  @param fileUrl json文件的url
-// *
-// *  @return 答案字典
-// */
-//+ (NSDictionary *)getAnswerCommitDictInDBWithFileUrl:(NSString *)fileUrl;
-
 
 /**
  *  删除该关卡的题目缓存，删除条件对应多条题目，一次性删除，不匹配关卡version是因为version可能已经改变

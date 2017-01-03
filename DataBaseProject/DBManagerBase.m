@@ -9,13 +9,6 @@
 #import "DBManagerBase.h"
 
 @implementation DBManagerBase
-
-#pragma mark - 数据处理
-/*!
- * @brief 把格式化的JSON格式的字符串转换成字典
- * @param jsonString JSON格式的字符串
- * @return 返回字典
- */
 + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString
 {
     if (jsonString == nil || jsonString.length <= 0) {
@@ -40,7 +33,7 @@
 
 + (NSString *)dictionaryToJson:(NSDictionary *)dic
 {
-    if (dic.count<=0) {
+    if ([NSObject empty:dic]) {
         return @"";
     }
     NSError *parseError = nil;
@@ -49,27 +42,25 @@
                                                          error:&parseError];
     return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 }
-
-
 #pragma mark - 题目建表
 + (void)createQuestionInfoDBTable
 {
     NSDictionary * dict = @{
-                            kLevelId:@"TEXT",
+                            kLevelId:@"TEXT",      
                             kNowVersion:@"TEXT",
                             kStudentId:@"TEXT",
                             kInsertTime:@"INTEGER",
                             kQuestionJson:@"TEXT",
                             kJsonFileUrl:@"TEXT",
                             kJsonFileDownload:@"TEXT",
-                            kAnswerCommitDict:@"TEXT" //没用了，暂时保留
+                            kAnswerCommitDict:@"TEXT"
                             };
-    [[IPSDatabaseManager sharedDBManager] createTableWithName:kQuestionInfoDBTableName byKeyValueDict:dict];
+    [[DatabaseManager sharedDBManager] createTableWithName:kQuestionInfoDBTableName byKeyValueDict:dict];
 }
 
 + (void)deleteQuestionInfoDBTable
 {
-    [[IPSDatabaseManager sharedDBManager] dropTableWithName:kQuestionInfoDBTableName];
+    [[DatabaseManager sharedDBManager] dropTableWithName:kQuestionInfoDBTableName];
 }
 
 
@@ -83,27 +74,12 @@
                             kInsertTime:@"INTEGER",
                             kQuestionAnswerDBJson:@"TEXT"
                             };
-    [[IPSDatabaseManager sharedDBManager] createTableWithName:kQuestionAnswerDBTableName byKeyValueDict:dict];
+    [[DatabaseManager sharedDBManager] createTableWithName:kQuestionAnswerDBTableName byKeyValueDict:dict];
 }
 
 + (void)deleteQuestionAnswerDBTable
 {
-    [[IPSDatabaseManager sharedDBManager] dropTableWithName:kQuestionAnswerDBTableName];
-}
-
-#pragma mark - 点赞建表
-+ (void)createLikeDBTable{
-    NSDictionary * dict = @{
-                            kLikeTaskId:@"TEXT",
-                            kLikeCurrentUserId:@"TEXT",
-                            kLikeOtherId:@"TEXT"
-                            };
-    [[IPSDatabaseManager sharedDBManager] createTableWithName:kLikeDBTableName byKeyValueDict:dict];
-    
-}
-+ (void)deleteLikeDBTable
-{
-    [[IPSDatabaseManager sharedDBManager] dropTableWithName:kLikeDBTableName];
+    [[DatabaseManager sharedDBManager] dropTableWithName:kQuestionAnswerDBTableName];
 }
 
 @end

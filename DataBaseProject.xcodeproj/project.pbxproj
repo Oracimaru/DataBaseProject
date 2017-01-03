@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A44261451E1B4FCE00781F5B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A44261441E1B4FCE00781F5B /* libsqlite3.0.tbd */; };
 		A488774E1E166BFB00F807B8 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A488774D1E166BFB00F807B8 /* NSString+Helper.m */; };
 		A48877511E166C3600F807B8 /* NSObject+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = A48877501E166C3600F807B8 /* NSObject+Empty.m */; };
 		A495C74D1E164E9000A4E2CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A495C74C1E164E9000A4E2CD /* main.m */; };
@@ -15,10 +16,9 @@
 		A495C7561E164E9000A4E2CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A495C7541E164E9000A4E2CD /* Main.storyboard */; };
 		A495C7581E164E9000A4E2CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A495C7571E164E9000A4E2CD /* Assets.xcassets */; };
 		A495C75B1E164E9000A4E2CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A495C7591E164E9000A4E2CD /* LaunchScreen.storyboard */; };
-		A4FF4ABE1E1650A8006A3B96 /* IPSDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF4AB71E1650A8006A3B96 /* IPSDatabaseManager.m */; };
+		A4FF4ABE1E1650A8006A3B96 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF4AB71E1650A8006A3B96 /* DatabaseManager.m */; };
 		A4FF4ABF1E1650A8006A3B96 /* DBManagerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF4AB91E1650A8006A3B96 /* DBManagerBase.m */; };
 		A4FF4AC01E1650A8006A3B96 /* DBQuestionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF4ABB1E1650A8006A3B96 /* DBQuestionInfo.m */; };
-		A4FF4AC11E1650A8006A3B96 /* DBQuestionAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF4ABD1E1650A8006A3B96 /* DBQuestionAnswer.m */; };
 		A4FF4ACF1E16511D006A3B96 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF4AC51E16511D006A3B96 /* FMDatabase.m */; };
 		A4FF4AD01E16511D006A3B96 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF4AC71E16511D006A3B96 /* FMDatabaseAdditions.m */; };
 		A4FF4AD11E16511D006A3B96 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF4AC91E16511D006A3B96 /* FMDatabasePool.m */; };
@@ -27,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A44261441E1B4FCE00781F5B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		A488774C1E166BFB00F807B8 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
 		A488774D1E166BFB00F807B8 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
 		A488774F1E166C3600F807B8 /* NSObject+Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Empty.h"; sourceTree = "<group>"; };
@@ -42,14 +43,12 @@
 		A495C7571E164E9000A4E2CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A495C75A1E164E9000A4E2CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A495C75C1E164E9000A4E2CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4FF4AB61E1650A8006A3B96 /* IPSDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPSDatabaseManager.h; sourceTree = "<group>"; };
-		A4FF4AB71E1650A8006A3B96 /* IPSDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPSDatabaseManager.m; sourceTree = "<group>"; };
+		A4FF4AB61E1650A8006A3B96 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
+		A4FF4AB71E1650A8006A3B96 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 		A4FF4AB81E1650A8006A3B96 /* DBManagerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManagerBase.h; sourceTree = "<group>"; };
 		A4FF4AB91E1650A8006A3B96 /* DBManagerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManagerBase.m; sourceTree = "<group>"; };
 		A4FF4ABA1E1650A8006A3B96 /* DBQuestionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBQuestionInfo.h; sourceTree = "<group>"; };
 		A4FF4ABB1E1650A8006A3B96 /* DBQuestionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBQuestionInfo.m; sourceTree = "<group>"; };
-		A4FF4ABC1E1650A8006A3B96 /* DBQuestionAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBQuestionAnswer.h; sourceTree = "<group>"; };
-		A4FF4ABD1E1650A8006A3B96 /* DBQuestionAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBQuestionAnswer.m; sourceTree = "<group>"; };
 		A4FF4AC41E16511D006A3B96 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		A4FF4AC51E16511D006A3B96 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		A4FF4AC61E16511D006A3B96 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -68,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A44261451E1B4FCE00781F5B /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +110,7 @@
 		A495C74B1E164E9000A4E2CD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A44261441E1B4FCE00781F5B /* libsqlite3.0.tbd */,
 				A488774F1E166C3600F807B8 /* NSObject+Empty.h */,
 				A48877501E166C3600F807B8 /* NSObject+Empty.m */,
 				A488774C1E166BFB00F807B8 /* NSString+Helper.h */,
@@ -124,14 +125,12 @@
 		A4FF4AC21E1650B0006A3B96 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
-				A4FF4AB61E1650A8006A3B96 /* IPSDatabaseManager.h */,
-				A4FF4AB71E1650A8006A3B96 /* IPSDatabaseManager.m */,
+				A4FF4AB61E1650A8006A3B96 /* DatabaseManager.h */,
+				A4FF4AB71E1650A8006A3B96 /* DatabaseManager.m */,
 				A4FF4AB81E1650A8006A3B96 /* DBManagerBase.h */,
 				A4FF4AB91E1650A8006A3B96 /* DBManagerBase.m */,
 				A4FF4ABA1E1650A8006A3B96 /* DBQuestionInfo.h */,
 				A4FF4ABB1E1650A8006A3B96 /* DBQuestionInfo.m */,
-				A4FF4ABC1E1650A8006A3B96 /* DBQuestionAnswer.h */,
-				A4FF4ABD1E1650A8006A3B96 /* DBQuestionAnswer.m */,
 			);
 			name = DataBase;
 			sourceTree = "<group>";
@@ -228,10 +227,9 @@
 				A495C7501E164E9000A4E2CD /* AppDelegate.m in Sources */,
 				A495C74D1E164E9000A4E2CD /* main.m in Sources */,
 				A4FF4AC01E1650A8006A3B96 /* DBQuestionInfo.m in Sources */,
-				A4FF4ABE1E1650A8006A3B96 /* IPSDatabaseManager.m in Sources */,
+				A4FF4ABE1E1650A8006A3B96 /* DatabaseManager.m in Sources */,
 				A4FF4AD01E16511D006A3B96 /* FMDatabaseAdditions.m in Sources */,
 				A4FF4AD31E16511D006A3B96 /* FMResultSet.m in Sources */,
-				A4FF4AC11E1650A8006A3B96 /* DBQuestionAnswer.m in Sources */,
 				A4FF4AD11E16511D006A3B96 /* FMDatabasePool.m in Sources */,
 				A4FF4AD21E16511D006A3B96 /* FMDatabaseQueue.m in Sources */,
 				A4FF4ABF1E1650A8006A3B96 /* DBManagerBase.m in Sources */,

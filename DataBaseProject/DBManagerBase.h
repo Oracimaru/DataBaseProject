@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Danny. All rights reserved.
 //
 
-#import "IPSDatabaseManager.h"
+#import "DatabaseManager.h"
 
 //题目表名
 #define kQuestionInfoDBTableName @"questionInfoDBTableName"
@@ -35,7 +35,7 @@
 #define kLikeOtherId          @"likeOtherId"         //被点赞者ID
 
 
-@interface DBManagerBase : IPSDatabaseManager
+@interface DBManagerBase : DatabaseManager
 
 /**
  *  数据转换处理
@@ -63,14 +63,5 @@
  */
 + (void)deleteQuestionAnswerDBTable;
 
-
-/**
- *  点赞建表
- */
-+ (void)createLikeDBTable;
-/**
- *  点赞删表
- */
-+ (void)deleteLikeDBTable;
 
 @end

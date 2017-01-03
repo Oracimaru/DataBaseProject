@@ -14,17 +14,17 @@
 
 //写入时间戳
 static inline NSNumber * timeIntervalForDB() {
-    return @((NSInteger)([[NSDate date] timeIntervalSince1970ForMilliSecond]+0.5));
+    return @((NSInteger)([[NSDate date] timeIntervalSince1970]*1000+0.5));
 }
 
-@interface IPSDatabaseManager : NSObject
+@interface DatabaseManager : NSObject
 
 /**
  *  获取操作对象
  *
  *  @return 本类对象
  */
-+ (IPSDatabaseManager *)sharedDBManager;
++ (DatabaseManager *)sharedDBManager;
 
 /**
  *  建表

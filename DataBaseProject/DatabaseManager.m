@@ -6,17 +6,17 @@
 //  Copyright © 2016年 Danny. All rights reserved.
 //
 
-#import "IPSDatabaseManager.h"
+#import "DatabaseManager.h"
 
 #import "FMDatabaseAdditions.h"
-
+#import "DBManagerBase.h"
 //定义本工程所使用的数据库路径
 #define kDatabaseFilePath    [NSString stringWithFormat:@"%@/Documents", NSHomeDirectory()]
 #define kDatabaseFileName @"Database.db"
 
-static IPSDatabaseManager * _ipsDatabase = nil;
+static DatabaseManager * _ipsDatabase = nil;
 
-@implementation IPSDatabaseManager
+@implementation DatabaseManager
 {
     //全局的FMDatabase对象
     FMDatabase * _database;
@@ -25,15 +25,21 @@ static IPSDatabaseManager * _ipsDatabase = nil;
 }
 
 #pragma mark - Init
-+ (IPSDatabaseManager *)sharedDBManager
++ (DatabaseManager *)sharedDBManager
 {
     //考虑多线程，不允许多条线程同时调用
     @synchronized(self) {
         if (_ipsDatabase == nil) {
             _ipsDatabase = [[self alloc] initWithDBFileName:kDatabaseFileName];
+            [self createIPSDatabaseTable];
         }
     }
     return _ipsDatabase;
+}
++ (void)createIPSDatabaseTable
+{
+    //动态建表：题目
+    [DBManagerBase createQuestionInfoDBTable];
 }
 
 - (instancetype)initWithDBFileName:(NSString *)name
@@ -304,7 +310,7 @@ static IPSDatabaseManager * _ipsDatabase = nil;
 //        @synchronized(_database) {
             result = [_database executeQuery:sql, value];
 //        }
-        NSLog(@"条件查:select * from %@ where %@ = ?", tableName, name);
+        NSLog(@"条件查:select * from %@ where %@ = %@", tableName, name,value);
     }
     
     NSMutableArray * array = [NSMutableArray array];
@@ -317,7 +323,7 @@ static IPSDatabaseManager * _ipsDatabase = nil;
             id object = [result objectForColumnName:key];
             [objcArr addObject:object];
         }
-        
+        //查询jsonFileUrl=""的jsonFileDownload值
         NSDictionary * dict = [NSDictionary dictionaryWithObjects:objcArr forKeys:keyArray];
         
         [array addObject:dict];

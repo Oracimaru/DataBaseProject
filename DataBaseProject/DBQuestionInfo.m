@@ -26,7 +26,7 @@
                             kJsonFileDownload:jsonFileString,
                             kAnswerCommitDict:jsonFileString //初始用url占位
                             };
-    [[IPSDatabaseManager sharedDBManager] insertDataToTable:kQuestionInfoDBTableName byKeyValueDict:dict];
+    [[DatabaseManager sharedDBManager] insertDataToTable:kQuestionInfoDBTableName byKeyValueDict:dict];
 }
 
 #pragma mark -获取缓存题目json数组（元素为字典）
@@ -40,7 +40,7 @@
                             kNowVersion:aNowVersion,
                             kStudentId:aStudentId
                             };
-    NSArray * dataArr = [[IPSDatabaseManager sharedDBManager] selectDatasFromTable:kQuestionInfoDBTableName byKeyValueDict:dict andCollectByKeys:@[kQuestionJson]];
+    NSArray * dataArr = [[DatabaseManager sharedDBManager] selectDatasFromTable:kQuestionInfoDBTableName byKeyValueDict:dict andCollectByKeys:@[kQuestionJson]];
     NSLog(@"%@", dataArr);
     //二进制数组
     NSMutableArray * jsonDictArray = [NSMutableArray arrayWithCapacity:dataArr.count];
@@ -60,7 +60,7 @@
     if ([NSString isBlankString:fileUrl] || [NSString isBlankString:fileString]) {
         return ;
     }
-    [[IPSDatabaseManager sharedDBManager] updateTable:kQuestionInfoDBTableName paraDict:@{kJsonFileDownload:fileUrl} newParaDict:@{kJsonFileDownload:fileString}];
+    [[DatabaseManager sharedDBManager] updateTable:kQuestionInfoDBTableName paraDict:@{kJsonFileDownload:fileUrl} newParaDict:@{kJsonFileDownload:fileString}];
 }
 
 #pragma mark -获取缓存题目jsonfile字典
@@ -70,7 +70,7 @@
         return nil;
     }
 
-    NSArray * dataArr = [[IPSDatabaseManager sharedDBManager] selectDatasFromTable:kQuestionInfoDBTableName byParaName:kJsonFileUrl paraValue:fileUrl andCollectByKeys:@[kJsonFileDownload]];
+    NSArray * dataArr = [[DatabaseManager sharedDBManager] selectDatasFromTable:kQuestionInfoDBTableName byParaName:kJsonFileUrl paraValue:fileUrl andCollectByKeys:@[kJsonFileDownload]];
     
     //如果对应的内容没有被下载的数据替换，则返回空
     if ([[[dataArr firstObject] objectForKey:kJsonFileDownload] isEqualToString:fileUrl]) {
@@ -83,35 +83,6 @@
     return tmpDict;
 }
 
-//#pragma mark - 更新题目答案的json字符串
-//+ (void)updateAnswerCommitDictWithFileUrl:(NSString *)fileUrl andAnswerCommitDict:(NSDictionary *)answerDict
-//{
-//    if ([NSString isBlankString:fileUrl] || [NSObject empty:answerDict]) {
-//        return ;
-//    }
-//    [[IPSDatabaseManager sharedDBManager] updateTable:kQuestionInfoDBTableName paraDict:@{kAnswerCommitDict:fileUrl} newParaDict:@{kAnswerCommitDict:[self dictionaryToJson:answerDict]}];
-//}
-//
-//#pragma mark -获取缓存题目答案字典
-//+ (NSDictionary *)getAnswerCommitDictInDBWithFileUrl:(NSString *)fileUrl
-//{
-//    if ([NSString isBlankString:fileUrl]) {
-//        return nil;
-//    }
-//    
-//    NSArray * dataArr = [[IPSDatabaseManager sharedDBManager] selectDatasFromTable:kQuestionInfoDBTableName byParaName:kJsonFileUrl paraValue:fileUrl andCollectByKeys:@[kAnswerCommitDict]];
-//    
-//    //如果对应的内容没有被下载的数据替换，则返回空
-//    if ([[[dataArr firstObject] objectForKey:kAnswerCommitDict] isEqualToString:fileUrl]) {
-//        return nil;
-//    }
-//    
-//    NSDictionary * tmpDict = [self dictionaryWithJsonString:[[dataArr firstObject] objectForKey:kAnswerCommitDict]]; //应该只有一条数据
-//    DLog(@"题目答案-数据库缓存：%@", tmpDict);
-//    //字典数组
-//    return tmpDict;
-//}
-
 #pragma mark - 删除相关缓存，因为条件不唯一，可以一次性删除
 + (void)deleteQuestionInDBWithLevelId:(NSString *)levelId studentId:(NSString *)aStudentId
 {
@@ -122,13 +93,13 @@
                             kLevelId:levelId,
                             kStudentId:aStudentId
                             };
-    [[IPSDatabaseManager sharedDBManager] deleteDataFromTable:kQuestionInfoDBTableName byKeyValueDict:dict];
+    [[DatabaseManager sharedDBManager] deleteDataFromTable:kQuestionInfoDBTableName byKeyValueDict:dict];
 }
 
 #pragma mark -删除指定时间的数据
 + (void)deleteDatasTimeAgoInSecond:(NSTimeInterval)second
 {
-    [[IPSDatabaseManager sharedDBManager] deleteDatasFromTable:kQuestionInfoDBTableName withTimeIntervalKeyPath:kInsertTime andTimeAgoInSecond:second];
+    [[DatabaseManager sharedDBManager] deleteDatasFromTable:kQuestionInfoDBTableName withTimeIntervalKeyPath:kInsertTime andTimeAgoInSecond:second];
 }
 
 @end
