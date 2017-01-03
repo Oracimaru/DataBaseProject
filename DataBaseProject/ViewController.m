@@ -27,13 +27,14 @@
      kAnswerCommitDict:@"hello"
      };
      */
-    [DBQuestionInfo insertQuestionInDBWithLevelId:@"1" nowVersion:@"21" studentId:@"zhang" andDictionary:@{@"name":@"zhangsan",@"age":@"21"} andJsonFileString:@"hello"];
+    [DBQuestionInfo insertQuestionInDBWithLevelId:@"4" nowVersion:@"3.1.2" studentId:@"2" andDictionary:@{@"name":@"zhangsan",@"age":@"21"} andJsonFileString:@"api.kaojibang.com"];
     
-    [DBQuestionInfo getQuestionsInDBWithLevelId:@"1" nowVersion:@"21" studentId:@"zhang"];
+    [DBQuestionInfo getQuestionsInDBWithLevelId:@"1" nowVersion:@"3.1.2" studentId:@"2"];
     
-    [DBQuestionInfo updateJsonFileStringWithFileUrl:@"hello" andDownloadFileString:[DBQuestionInfo dictionaryToJson:@{@"responString":@"khffklall"}]];
+    NSString * responString = @"{\"errcode\":0,\"errmsg\":\"\",\"version\":\"1.0\",\"res\":{\"total\":1,\"list\":[{\"id\":\"47\",\"teacher\":\"\u53f6\u857e,\u949f\u5e73\"}],\"advert\":[]},\"state\":1}";
+    [DBQuestionInfo updateJsonFileStringWithFileUrl:@"api.kaojibang.com" andDownloadFileString:[DBQuestionInfo dictionaryToJson:@{@"responString":responString}]];
     
-    [DBQuestionInfo getDownloadQuestionsJsonFileInDBWithFileUrl:@"hello"];
+    [DBQuestionInfo getDownloadQuestionsJsonFileInDBWithFileUrl:@"api.kaojibang.com"];
     
     
     [DBQuestionInfo deleteDatasTimeAgoInSecond:10];
